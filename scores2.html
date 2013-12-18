@@ -1,0 +1,70 @@
+
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>PV Game: Mobile</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+	<link rel="stylesheet" href="page.css">
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.min.js"></script>
+	<script src="js/site.js"></script>
+    <script src="js/styles.js"></script>
+	<!--jqplot-->
+	<script type="text/javascript" src="js/jqplot/jquery.jqplot.min.js"></script>
+	<script type="text/javascript" src="js/jqplot/plugins/jqplot.barRenderer.min.js"></script>
+	<script type="text/javascript" src="js/jqplot/plugins/jqplot.pieRenderer.min.js"></script>
+	<script type="text/javascript" src="js/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+	<script type="text/javascript" src="js/jqplot/plugins/jqplot.pointLabels.min.js"></script>
+	<script type="text/javascript" src="js/jqplot/plugins/jqplot.bubbleRenderer.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/jqplot/jquery.jqplot.min.css" />
+	<!--//-->
+</head> 
+
+	
+<body> 
+
+	<div data-role="page" id="s2" class="app-page" data-dom-cache="false" data-theme="c" data-title="PV Game: Score" data-next="ad2" data-selectdata="scores" data-segment="2">
+		
+		<div data-role="header" id="hdr" data-dom-cache="false">
+			<ul class="info_banner">
+				<li><small>Question</small><span class="question">&nbsp;</span></li>
+				<li><small>Score</small><span class="score">&nbsp;</span></li>
+				<li><small>Rank</small><span class="rank">&nbsp;</span></li>
+			</ul>
+			<div data-role="controlgroup" class="btn-default control ui-btn-right" data-type="horizontal" data-mini="true">
+				<a class="btn-default next" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next</a>
+			</div>
+		</div><!-- /header -->
+
+		<div id="score_content" data-role="content" style="display:none;">
+			<h2>SCORE</h2>
+			<p><span class="score">{{score}}</span></p>
+			<h2>RANK</h2>
+            <p><span class="rank">{{rank}} </span><br><small>Percentile</small></p>
+			<img class="small_logo" src="img/logo-sm.jpg">
+		</div><!-- /content -->
+
+		<div data-role="footer" id="ftr" data-position="fixed" data-fullscreen="false" data-dom-cache="true">
+			<div class="ui-grid-a" id="ftr-content" width="100%" height="100">
+				<div class="ui-block-a" id="sponsored">
+				this program sponsored by<br/>
+				<img width="120" src="img/logo_eliquis.png"/>
+			</div>
+
+			<div class="ui-block-b" id="ISI"></div>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+
+
+</body>
+</html>
